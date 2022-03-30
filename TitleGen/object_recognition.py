@@ -17,9 +17,6 @@ def detect(img_path):
         img_path (string) : chemin de l'image
     """
     img = plt.imread(img_path)
-    plt.figure(figsize=(8,8))
-    plt.imshow(img)
-    plt.show()
 
     img = cv2.resize(img, (224,224)).astype("float32")
     img_batch = preprocess_input(img[np.newaxis]) 
@@ -32,3 +29,5 @@ def detect(img_path):
     probas = [l[2] for l in labels[0][:3]]
 
     return keywords, probas
+
+print(detect("Data/wikiart-base/Symbolism/frantisek-kupka_ballad-of-epona-1900.jpg"))
