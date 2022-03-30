@@ -1,3 +1,6 @@
+<<<<<<< HEAD
 *.csv filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
+=======
+>>>>>>> c3dd1cf584439b0f47227e6b4682e51dc5c411fd
 *.jpg filter=lfs diff=lfs merge=lfs -binary
