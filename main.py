@@ -1,3 +1,4 @@
+#Import des modules nécessaires
 from tkinter import *
 from tkinter import filedialog 
 from shutil import *
@@ -5,6 +6,9 @@ from ntpath import *
 from os import *
 from PIL import Image, ImageTk
 
+#Import des fichiers du projets.
+
+#Variables du fichier à prédéfinir
 filedatapath = "Interface/data/"
 imagefilepath = "Interface/images/"
 styleselected = ""
@@ -16,7 +20,7 @@ padxf1 = 50
 padyf1 = 10
 path_list = []
 images_reference_list = []
-project_name="Nom du projet"
+project_name="Générateur de peintures"
 color1="#ebeeb0"
 color2="#92001f"
 
@@ -94,8 +98,8 @@ window = Tk()
 #bar de nav
 menu_bar = Menu(window)
 menu_file = Menu(menu_bar, tearoff = 0)
-menu_file.add_command(label="New", command=New)
-menu_file.add_command(label="Exit", command=window.quit)
+menu_file.add_command(label="Nouveau", command=New)
+menu_file.add_command(label="Quitter", command=window.quit)
 
 menu_edit = Menu(menu_bar, tearoff = 0)
 menu_edit.add_command(label="Fusion", command=Fusion)
@@ -129,7 +133,7 @@ frame_listbox_right=Frame(frame_right, bg = color1, highlightbackground=color2, 
 
 label_top = Label(frame_top, text="Veuillez ajouter des images : ", font=("Arial black", 20, 'bold'), bg=color1, fg=color2)
 label_top.grid(column = 0, row = 0)
-button_explore = Button(frame_top, text = "Browse Images", command = browseFiles, bd = 5)
+button_explore = Button(frame_top, text = "Ajouter une image", command = browseFiles, bd = 5, bg=color1, fg=color2)
 button_explore.grid(column = 1, row = 0)
 
 #frame left :
